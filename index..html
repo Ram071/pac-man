@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pac-Man</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game">
+
+    <h1>PAC-MAN</h1>
+
+    <div class="top-bar">
+        <div>
+            SCORE
+            <span id="score">0</span>
+        </div>
+
+        <div>
+            HIGH SCORE
+            <span id="highScore">0</span>
+        </div>
+
+        <div>
+            LIVES
+            <span id="lives">3</span>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="message" class="message">
+        <h2>PAC-MAN</h2>
+        <p>Press ENTER to Start</p>
+    </div>
+
+    <div class="mobile-controls">
+
+        <button data-key="ArrowUp">▲</button>
+
+        <div>
+            <button data-key="ArrowLeft">◀</button>
+            <button data-key="ArrowDown">▼</button>
+            <button data-key="ArrowRight">▶</button>
+        </div>
+
+    </div>
+
+    <div class="instructions">
+        Arrow Keys / WASD to move
+        <br>
+        P = Pause
+    </div>
+
+    <button id="restart">RESTART</button>
+
+</div>
+
+<script src="game.js"></script>
+<div class="buttons">
+
+    <button id="restart">
+        RESTART
+    </button>
+
+    <button
+        id="soundButton"
+        onclick="toggleSound()"
+    >
+        🔊 SOUND ON
+    </button>
+
+</div>
+</body>
+</html>
