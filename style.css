@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game {
+    text-align: center;
+
+    position: relative;
+
+    width: 620px;
+
+    max-width: 100%;
+}
+
+h1 {
+    margin: 10px 0;
+
+    color: yellow;
+
+    font-size: 42px;
+
+    letter-spacing: 6px;
+
+    text-shadow:
+        0 0 5px yellow,
+        0 0 15px orange;
+}
+
+.top-bar {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 15px;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.top-bar span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: yellow;
+
+    font-size: 18px;
+}
+
+canvas {
+    display: block;
+
+    margin: auto;
+
+    background: black;
+
+    border: 3px solid #1717ff;
+
+    box-shadow:
+        0 0 10px #1111ff,
+        0 0 25px #1111aa;
+}
+
+.message {
+    position: absolute;
+
+    left: 50%;
+
+    top: 52%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+
+    padding: 25px;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    border: 2px solid yellow;
+
+    color: white;
+
+    z-index: 10;
+}
+
+.message h2 {
+    color: yellow;
+
+    font-size: 32px;
+
+    margin: 0 0 15px;
+}
+
+.message p {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+.instructions {
+    margin-top: 10px;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    line-height: 22px;
+}
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+#restart {
+    margin-top: 15px;
+
+    padding: 10px 25px;
+
+    background: yellow;
+
+    color: black;
+
+    border-radius: 5px;
+}
+
+#restart:hover {
+    background: orange;
+}
+
+.mobile-controls {
+    display: none;
+
+    margin-top: 15px;
+}
+
+.mobile-controls button {
+    width: 55px;
+
+    height: 45px;
+
+    margin: 3px;
+
+    border-radius: 8px;
+
+    background: #222;
+
+    color: white;
+
+    border: 1px solid #555;
+
+    font-size: 20px;
+}
+
+.mobile-controls button:active {
+    background: yellow;
+
+    color: black;
+}
+
+@media (max-width: 650px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    canvas {
+        width: 95vw;
+
+        height: auto;
+    }
+
+    .mobile-controls {
+        display: block;
+    }
+
+    .instructions {
+        display: none;
+    }
+
+}
